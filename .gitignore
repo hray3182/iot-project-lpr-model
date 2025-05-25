@@ -1,0 +1,13 @@
+*.pt
+
+.venv
+
+runs/
+
+dataset/test
+dataset/train
+dataset/val
+
+*.npy
+
+dataset.7z

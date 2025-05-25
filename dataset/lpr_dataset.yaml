@@ -1,0 +1,12 @@
+# Path to training images directory (relative to this YAML file)
+train: train/
+
+# Path to validation images directory (relative to this YAML file)
+val: val/
+
+# Path to test images directory (optional, relative to this YAML file)
+test: test/
+
+# Classes
+names:
+  0: license_plate 
