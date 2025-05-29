@@ -5,7 +5,7 @@ import torch # 用於檢查 CUDA
 
 def run_webcam_segmentation():
     # --- 設定區 ---
-    MODEL_PATH = "runs/segment/train3/weights/best.pt"  # *** 請修改為您最佳模型的路徑 ***
+    MODEL_PATH = "best.pt"  # *** 請修改為您最佳模型的路徑 ***
     CONFIDENCE_THRESHOLD = 0.25  # 物件偵測的信心度閾值
     OVERLAY_COLOR = (0, 255, 0)  # BGR 格式的顏色，例如綠色
     ALPHA = 0.4  # 疊加顏色的透明度 (0.0 完全透明, 1.0 完全不透明)
@@ -26,7 +26,7 @@ def run_webcam_segmentation():
         return
 
     # 開啟網路攝影機
-    cap = cv2.VideoCapture(0)  # 0 代表預設攝影機，如果有多個攝影機，可以嘗試 1, 2, ...
+    cap = cv2.VideoCapture(1)  # 0 代表預設攝影機，如果有多個攝影機，可以嘗試 1, 2, ...
 
     if not cap.isOpened():
         print("Error: Could not open webcam.")
